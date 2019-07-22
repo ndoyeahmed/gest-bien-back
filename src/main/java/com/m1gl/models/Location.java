@@ -28,7 +28,7 @@ public class Location implements Serializable {
     private Long prixLocation;
 
     @ManyToOne
-    private Utilisateur user;
+    private Utilisateur utilisateur;
 
     @ManyToOne
     private Bien bien;
@@ -87,11 +87,11 @@ public class Location implements Serializable {
 
     @JsonIgnore
     public Utilisateur getUser() {
-        return user;
+        return utilisateur;
     }
 
     public void setUser(Utilisateur user) {
-        this.user = user;
+        this.utilisateur = user;
     }
 
     public Bien getBien() {
