@@ -1,0 +1,18 @@
+
+rsquid:S2095ë"NUse try-with-resources or close this "FileOutputStream" in a "finally" clause.(Ê§Ê´ùÿÿÿÿ8”–¾Ø¿-
+?squid:S1170"!Make this final field static too.(æéƒ8”–¾Ø¿-
+isquid:CommentedOutCodeLineP"<This block of commented-out lines of code should be removed.(…¼•8”–¾Ø¿-
+vsquid:S00116"WRename this field "ERROR_SERVER" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(æéƒ8”–¾Ø¿-
+qsquid:S00117İ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ëñ°›8”–¾Ø¿-
+qsquid:S00117ä"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Âó¦8”–¾Ø¿-
+nsquid:CommentedOutCodeLineI"<This block of commented-out lines of code should be removed.(—ˆÅ“üÿÿÿÿ8”–¾Ø¿-
+?squid:S1170"!Make this final field static too.(İÍóì8”–¾Ø¿-
+ksquid:S00112Õ"FDefine and throw a dedicated exception instead of using a generic one.(®Ùÿ†şÿÿÿÿ8”–¾Ø¿-
+{squid:S00116"\Rename this field "ALL_FIELD_REQUIRE" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(İÍóì8”–¾Ø¿-
+nsquid:CommentedOutCodeLine]"<This block of commented-out lines of code should be removed.(†Ğãÿùÿÿÿÿ8”–¾Ø¿-
+hsquid:CommentedOutCodeLineB"<This block of commented-out lines of code should be removed.(”¿Š58”–¾Ø¿-
+vsquid:S00117Ú"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(³Ó³ßüÿÿÿÿ8”–¾Ø¿-
+nsquid:CommentedOutCodeLineU"<This block of commented-out lines of code should be removed.(ñ¥ùšøÿÿÿÿ8”–¾Ø¿-
+psquid:S00117f"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¾Ó‰8”–¾Ø¿-
+Bsquid:S1148‘"#Use a logger to log this exception.(Ç’Çê8”–¾Ø¿-
+vsquid:S00117Õ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(®Ùÿ†şÿÿÿÿ8”–¾Ø¿-

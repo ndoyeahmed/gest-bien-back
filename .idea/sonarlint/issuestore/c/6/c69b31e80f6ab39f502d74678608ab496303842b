@@ -1,0 +1,11 @@
+
+¡%squid:RedundantThrowsDeclarationCheck"kRemove the declaration of thrown exception 'org.hibernate.HibernateException' which is a runtime exception.(ä²›øÿÿÿÿ
+O
+squid:S106%"9Replace this use of System.out or System.err by a logger.(ÚÈÀÅ
+O
+squid:S106*"9Replace this use of System.out or System.err by a logger.( ´ù˜
+T
+squid:S106,"9Replace this use of System.out or System.err by a logger.(¿ËÛ›ûÿÿÿÿ
+]squid:S00112""FDefine and throw a dedicated exception instead of using a generic one.(İ†ú.
+Asquid:S1181"%Catch Exception instead of Throwable.(À˜§üÿÿÿÿ
+:squid:S1148"#Use a logger to log this exception.(Ç’Çê
