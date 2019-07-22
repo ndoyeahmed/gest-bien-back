@@ -2,31 +2,24 @@ package main.java.com.m1gl.models;
 
 import javax.persistence.*;
 import java.io.Serializable;
-import java.util.Date;
 
-/**
- * @author Mouhamed NDOYE
- * @since 2019-06-01
- * @version 1.0.0
- */
 @Entity
+@Table(name = "utilisateur")
 public class User extends Personne implements Serializable {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    @Column(length = 80,nullable = false)
     private String username;
-    private String password;
-    @Temporal(TemporalType.TIMESTAMP)
-    private Date date;
-    private Boolean status;
-    private Boolean archive;
 
-    public Long getId() {
-        return id;
+    @Column(length = 80,nullable = false)
+    private String password;
+
+
+
+    public User(String username, String password) {
+        this.username = username;
+        this.password = password;
     }
 
-    public void setId(Long id) {
-        this.id = id;
+    public User() {
     }
 
     public String getUsername() {
@@ -43,29 +36,5 @@ public class User extends Personne implements Serializable {
 
     public void setPassword(String password) {
         this.password = password;
-    }
-
-    public Date getDate() {
-        return date;
-    }
-
-    public void setDate(Date date) {
-        this.date = date;
-    }
-
-    public Boolean getStatus() {
-        return status;
-    }
-
-    public void setStatus(Boolean status) {
-        this.status = status;
-    }
-
-    public Boolean getArchive() {
-        return archive;
-    }
-
-    public void setArchive(Boolean archive) {
-        this.archive = archive;
     }
 }

@@ -1,14 +1,31 @@
 package main.java.com.m1gl.models;
 
-import javax.persistence.MappedSuperclass;
+import javax.persistence.*;
 import java.io.Serializable;
 
-@MappedSuperclass
+@Entity
+@Inheritance(strategy = InheritanceType.JOINED)
 public class Personne implements Serializable {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    protected Long id;
+    @Column(nullable = false,length = 30)
     protected String matricule;
+    @Column(nullable = false,length = 50)
     protected String nom;
+    @Column(nullable = false,length = 50)
     protected String prenom;
+    @Column(nullable = false,length = 50)
     protected String email;
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
 
     public String getMatricule() {
         return matricule;
