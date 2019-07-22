@@ -28,7 +28,7 @@ public class Location implements Serializable {
     private Long prixLocation;
 
     @ManyToOne
-    @JoinColumn(name = "user", referencedColumnName = "idUser")
+    @JoinColumn(name = "user", referencedColumnName = "id")
     private User user;
 
     @ManyToOne
