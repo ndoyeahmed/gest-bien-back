@@ -8,6 +8,7 @@ public class User extends Personne implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id")
     private Long idUser;
     @Column(length = 80,nullable = false)
     private String username;
