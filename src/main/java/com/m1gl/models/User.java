@@ -15,16 +15,6 @@ public class User extends Personne implements Serializable {
     @Column(length = 80,nullable = false)
     private String password;
 
-
-
-    public User(String username, String password) {
-        this.username = username;
-        this.password = password;
-    }
-
-    public User() {
-    }
-
     public String getUsername() {
         return username;
     }

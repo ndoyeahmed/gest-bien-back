@@ -11,19 +11,6 @@
         </webroots>
       </configuration>
     </facet>
-    <facet type="hibernate" name="Hibernate">
-      <configuration>
-        <datasource-map>
-          <unit-entry name=".postgres.example.hibernate.cfg.xml" />
-          <unit-entry name="hibernate.cfg.xml" />
-          <unit-entry name="main:resources:.postgres.example.hibernate.cfg.xml" value="52908779-9b94-44ac-85f6-fc66dcbe559c" />
-          <unit-entry name="main:resources:hibernate.cfg.xml" value="da838895-4655-4da8-b132-c3f9d965f60c" />
-        </datasource-map>
-        <naming-strategy-map />
-        <deploymentDescriptor name="hibernate.cfg.xml" url="file://$MODULE_DIR$/src/main/resources/.postgres.example.hibernate.cfg.xml" />
-        <deploymentDescriptor name="hibernate.cfg.xml" url="file://$MODULE_DIR$/src/main/resources/hibernate.cfg.xml" />
-      </configuration>
-    </facet>
   </component>
   <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_8">
     <output url="file://$MODULE_DIR$/target/classes" />
