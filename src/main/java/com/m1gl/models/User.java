@@ -8,7 +8,7 @@ public class User extends Personne implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Long idUser;
     @Column(length = 80,nullable = false)
     private String username;
 
@@ -31,11 +31,11 @@ public class User extends Personne implements Serializable {
         this.password = password;
     }
 
-    public Long getId() {
-        return id;
+    public Long getIdUser() {
+        return idUser;
     }
 
-    public void setId(Long id) {
-        this.id = id;
+    public void setIdUser(Long idUser) {
+        this.idUser = idUser;
     }
 }
