@@ -20,7 +20,6 @@ public class Paiement implements Serializable {
     private Date datePaiement;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "user", referencedColumnName = "id")
     private User user;
 
     @ManyToOne
