@@ -8,10 +8,9 @@ import main.java.com.m1gl.models.TypeReglement;
 import main.java.com.m1gl.services.IParametrage;
 import org.hibernate.Session;
 
-import javax.ejb.Stateless;
 import java.util.List;
 
-@Stateless
+//@Stateless
 public class ParametrageDAO implements IParametrage {
     Session session = HibernateConfiguration.getSession();
 

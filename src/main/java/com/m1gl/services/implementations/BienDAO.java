@@ -9,11 +9,10 @@ import main.java.com.m1gl.models.Typebien;
 import main.java.com.m1gl.services.IBienServices;
 import org.hibernate.Session;
 
-import javax.ejb.Stateless;
 import java.util.ArrayList;
 import java.util.List;
 
-@Stateless
+//@Stateless
 public class BienDAO implements IBienServices {
     Session session = HibernateConfiguration.getSession();
 

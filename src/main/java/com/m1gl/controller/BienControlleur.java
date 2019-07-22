@@ -5,11 +5,10 @@ import main.java.com.m1gl.models.Bailleur;
 import main.java.com.m1gl.models.Bien;
 import main.java.com.m1gl.models.Photo;
 import main.java.com.m1gl.models.Typebien;
-import main.java.com.m1gl.services.IBienServices;
+import main.java.com.m1gl.services.implementations.BienDAO;
 import main.java.com.m1gl.utils.Utilitaire;
 import org.glassfish.jersey.media.multipart.*;
 
-import javax.ejb.EJB;
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
@@ -30,8 +29,8 @@ public class BienControlleur extends BaseController {
     private final String ALL_FIELD_REQUIRE = "Renseigner tous les champs!";
     private final String ERROR_SERVER = "Erreur server";
 
-    @EJB
-    private IBienServices ibiens;
+    //    @EJB
+    private final BienDAO ibiens = new BienDAO();
 
 
     /**

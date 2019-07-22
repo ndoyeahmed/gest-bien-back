@@ -2,11 +2,9 @@ package main.java.com.m1gl.controller;
 
 
 import main.java.com.m1gl.models.Client;
-import main.java.com.m1gl.services.IClientServices;
+import main.java.com.m1gl.services.implementations.ClientDAO;
 import main.java.com.m1gl.utils.Utilitaire;
 
-
-import javax.ejb.EJB;
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
@@ -17,8 +15,7 @@ import javax.ws.rs.core.Response;
 @Path("/clients")
 public class ClientController extends BaseController{
 
-    @EJB
-    IClientServices iclient;
+    private final ClientDAO iclient = new ClientDAO();
 
     @GET
     @Produces(MediaType.APPLICATION_JSON)

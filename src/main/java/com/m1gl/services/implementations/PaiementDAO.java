@@ -7,12 +7,10 @@ import main.java.com.m1gl.models.Paiement;
 import main.java.com.m1gl.services.IPaiement;
 import org.hibernate.Session;
 
-
-import javax.ejb.Stateless;
 import java.util.ArrayList;
 import java.util.List;
 
-@Stateless
+//@Stateless
 public class PaiementDAO implements IPaiement {
 
     private Session session= HibernateConfiguration.getSession();

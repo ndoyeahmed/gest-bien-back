@@ -5,11 +5,9 @@ import main.java.com.m1gl.models.Mois;
 import main.java.com.m1gl.models.MoisAnnee;
 import main.java.com.m1gl.models.TypeReglement;
 
-
-import javax.ejb.Local;
 import java.util.List;
 
-@Local
+//@Local
 public interface IParametrage {
 
     boolean addyear(Annee annee);

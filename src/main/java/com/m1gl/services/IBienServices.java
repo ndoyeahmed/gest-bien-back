@@ -5,10 +5,9 @@ import main.java.com.m1gl.models.Bien;
 import main.java.com.m1gl.models.Photo;
 import main.java.com.m1gl.models.Typebien;
 
-import javax.ejb.Local;
 import java.util.List;
 
-@Local
+//@Local
 public interface IBienServices {
 
     List<Bailleur> getAllBailleurs();

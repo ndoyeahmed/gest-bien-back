@@ -5,10 +5,9 @@ import main.java.com.m1gl.models.MoisAnnee;
 import main.java.com.m1gl.models.MoisPaiement;
 import main.java.com.m1gl.models.Paiement;
 
-import javax.ejb.Local;
 import java.util.List;
 
-@Local
+//@Local
 public interface IPaiement {
 
     boolean addPaiement(Paiement paiement, List<MoisAnnee> moisAnnees);

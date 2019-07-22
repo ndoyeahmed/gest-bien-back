@@ -1,26 +1,21 @@
 package main.java.com.m1gl.controller;
 
 
-
-
 import main.java.com.m1gl.models.User;
-import main.java.com.m1gl.services.IUserServices;
+import main.java.com.m1gl.services.implementations.UserDAO;
 import main.java.com.m1gl.utils.Utilitaire;
 import org.glassfish.jersey.media.multipart.FormDataParam;
 
-import javax.ejb.EJB;
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
-
 import java.util.List;
 
 @Path("/users")
 public class UserController extends BaseController{
 
 
-    @EJB
-    private IUserServices iuser;
+    private final UserDAO iuser = new UserDAO();
 
 
 

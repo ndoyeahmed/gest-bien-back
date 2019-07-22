@@ -1,12 +1,10 @@
 package main.java.com.m1gl.services;
 
 import main.java.com.m1gl.models.Client;
-import main.java.com.m1gl.models.Location;
 
-import javax.ejb.Local;
 import java.util.List;
 
-@Local
+//@Local
 public interface IClientServices {
 
     boolean addClient(Client client);

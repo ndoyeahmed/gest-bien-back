@@ -5,11 +5,9 @@ import main.java.com.m1gl.models.User;
 import main.java.com.m1gl.services.IUserServices;
 import org.hibernate.Session;
 
-
-import javax.ejb.Stateless;
 import java.util.List;
 
-@Stateless
+//@Stateless
 public class UserDAO implements IUserServices {
     Session session = HibernateConfiguration.getSession();
 

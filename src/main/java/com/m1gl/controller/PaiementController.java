@@ -2,39 +2,29 @@ package main.java.com.m1gl.controller;
 
 import main.java.com.m1gl.models.MoisAnnee;
 import main.java.com.m1gl.models.Paiement;
-import main.java.com.m1gl.services.ILocationServices;
-import main.java.com.m1gl.services.IPaiement;
-import main.java.com.m1gl.services.IParametrage;
-import main.java.com.m1gl.services.IUserServices;
+import main.java.com.m1gl.services.implementations.LocationDAO;
+import main.java.com.m1gl.services.implementations.PaiementDAO;
+import main.java.com.m1gl.services.implementations.ParametrageDAO;
+import main.java.com.m1gl.services.implementations.UserDAO;
 import main.java.com.m1gl.utils.Utilitaire;
-import org.glassfish.jersey.media.multipart.FormDataParam;
 
-import javax.ejb.EJB;
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import java.time.LocalDate;
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.LinkedList;
 import java.util.List;
-
-import static java.time.LocalDate.*;
 
 @Path("paiements")
 public class PaiementController extends BaseController {
 
-    @EJB
-    ILocationServices ilocation;
+    private final LocationDAO ilocation = new LocationDAO();
 
-    @EJB
-    IPaiement ipaiement;
+    private final PaiementDAO ipaiement = new PaiementDAO();
 
-    @EJB
-    IUserServices iuser;
+    private final UserDAO iuser = new UserDAO();
 
-    @EJB
-    IParametrage iparam;
+    private final ParametrageDAO iparam = new ParametrageDAO();
 
     @POST
     @Produces(MediaType.APPLICATION_JSON)

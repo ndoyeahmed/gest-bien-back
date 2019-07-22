@@ -5,11 +5,10 @@ import main.java.com.m1gl.models.Location;
 import main.java.com.m1gl.services.ILocationServices;
 import org.hibernate.Session;
 
-import javax.ejb.Stateless;
 import java.util.ArrayList;
 import java.util.List;
 
-@Stateless
+//@Stateless
 public class LocationDAO implements ILocationServices {
 
     private Session session = HibernateConfiguration.getSession();

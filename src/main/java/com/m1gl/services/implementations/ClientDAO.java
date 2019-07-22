@@ -1,16 +1,13 @@
 package main.java.com.m1gl.services.implementations;
 
-import jdk.nashorn.internal.ir.CatchNode;
 import main.java.com.m1gl.config.HibernateConfiguration;
 import main.java.com.m1gl.models.Client;
-import main.java.com.m1gl.models.Location;
 import main.java.com.m1gl.services.IClientServices;
 import org.hibernate.Session;
 
-import javax.ejb.Stateless;
 import java.util.List;
 
-@Stateless
+//@Stateless
 public class ClientDAO implements IClientServices {
     Session session= HibernateConfiguration.getSession();
 

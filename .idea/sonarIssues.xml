@@ -98,7 +98,27 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/../../SpringBootApp/madjindo-api/src/main/java/com/rezilux/madjindoapi/services/FicheDistributionService.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/.gitignore">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/Procfile">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/pom.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/com/m1gl/config/HibernateConfiguration.java">
           <value>
             <set />
           </value>
@@ -108,7 +128,27 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/com/m1gl/controller/ClientController.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/main/java/com/m1gl/controller/LocationController.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/com/m1gl/controller/PaiementController.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/com/m1gl/controller/ParametragesController.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/com/m1gl/controller/UserController.java">
           <value>
             <set />
           </value>
@@ -148,6 +188,11 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/com/m1gl/services/IClientServices.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/main/java/com/m1gl/services/ILocation.java">
           <value>
             <set />
@@ -158,7 +203,27 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/com/m1gl/services/IPaiement.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/com/m1gl/services/IParametrage.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/com/m1gl/services/IUserServices.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/main/java/com/m1gl/services/implementations/BienDAO.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/com/m1gl/services/implementations/ClientDAO.java">
           <value>
             <set />
           </value>
@@ -168,7 +233,27 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/com/m1gl/services/implementations/PaiementDAO.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/com/m1gl/services/implementations/ParametrageDAO.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/com/m1gl/services/implementations/UserDAO.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/main/java/com/m1gl/utils/Utilitaire.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/resources/hibernate-postgres.cfg.xml">
           <value>
             <set />
           </value>
@@ -178,7 +263,7 @@
             <set />
           </value>
         </entry>
-        <entry key="$PROJECT_DIR$/../../SpringBootApp/madjindo-api/src/main/java/com/rezilux/madjindoapi/services/FicheDistributionService.java">
+        <entry key="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
           <value>
             <set />
           </value>

@@ -1,9 +1,8 @@
 package main.java.com.m1gl.controller;
 
 import main.java.com.m1gl.models.Location;
-import main.java.com.m1gl.services.ILocationServices;
+import main.java.com.m1gl.services.implementations.LocationDAO;
 
-import javax.ejb.EJB;
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
@@ -11,8 +10,7 @@ import javax.ws.rs.core.Response;
 @Path("/locations")
 public class LocationController extends BaseController {
 
-    @EJB
-    ILocationServices iLocationServices;
+    private final LocationDAO iLocationServices = new LocationDAO();
 
     @GET
     @Produces(MediaType.APPLICATION_JSON)
