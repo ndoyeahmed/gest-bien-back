@@ -23,9 +23,7 @@ public class BaseController {
      */
     public static Response sendSuccess(String message,Object data){
 
-        return Response.ok().entity(new ResponseModel(true,200,message,data))
-                .header("Access-Control-Allow-Origin", "*")
-                .header("Access-Control-Allow-Methods","GET, PUT, POST, DELETE, OPTIONS").build();
+        return Response.ok().entity(new ResponseModel(true,200,message,data)).build();
 
     }
 
@@ -37,8 +35,7 @@ public class BaseController {
      */
     public static Response sendError(int code,String message){
 
-        return Response.status(code).entity(new ResponseModel(false,code,message,null))
-                .header("Access-Control-Allow-Origin", "*").build();
+        return Response.status(code).entity(new ResponseModel(false,code,message,null)).build();
 
     }
 }
