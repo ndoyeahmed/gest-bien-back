@@ -13,6 +13,11 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/../../../M1/JEE/Project/Immobilier/TEMPLATE/coreui-free-react-admin-template/src/services/api.js">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/../../Angular_project/madjindo/proxy.conf.json">
           <value>
             <set />
@@ -169,6 +174,11 @@
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/src/main/java/com/m1gl/models/Location.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/com/m1gl/models/Personne.java">
           <value>
             <set />
           </value>

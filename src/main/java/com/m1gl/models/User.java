@@ -1,15 +1,14 @@
 package main.java.com.m1gl.models;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
-
 import javax.persistence.*;
 import java.io.Serializable;
 
 @Entity
 public class User extends Personne implements Serializable {
 
-
-
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
     @Column(length = 80,nullable = false)
     private String username;
 
@@ -42,5 +41,11 @@ public class User extends Personne implements Serializable {
         this.password = password;
     }
 
+    public Long getId() {
+        return id;
+    }
 
+    public void setId(Long id) {
+        this.id = id;
+    }
 }
