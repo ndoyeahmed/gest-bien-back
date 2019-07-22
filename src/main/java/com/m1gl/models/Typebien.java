@@ -1,11 +1,10 @@
 package main.java.com.m1gl.models;
 
 import javax.persistence.*;
-import java.util.Collection;
-import java.util.List;
+import java.io.Serializable;
 
 @Entity
-public class Typebien {
+public class Typebien implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

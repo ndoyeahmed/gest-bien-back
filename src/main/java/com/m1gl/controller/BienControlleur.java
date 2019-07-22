@@ -10,7 +10,6 @@ import main.java.com.m1gl.utils.Utilitaire;
 import org.glassfish.jersey.media.multipart.*;
 
 import javax.ws.rs.*;
-import javax.ws.rs.core.GenericEntity;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import java.io.*;
@@ -52,9 +51,7 @@ public class BienControlleur extends BaseController {
     @Produces(MediaType.APPLICATION_JSON)
     public Response getAllTypeBiens() {
         List<Typebien> liste = ibiens.allTypeBien();
-        GenericEntity<List<Typebien>> entity = new GenericEntity<List<Typebien>>(liste) {
-        };
-        return Response.status(200).entity(entity).build();
+        return sendSuccess("Liste types bien", liste);
     }
 
     /**
