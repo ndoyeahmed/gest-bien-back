@@ -46,16 +46,19 @@ public class HibernateConfiguration {
                 }
             }
             try {
-                User user = new User();
-                user.setMatricule("admin");
-                user.setEmail("admin@mail.com");
-                user.setPrenom("Admin");
-                user.setNom("Admin");
-                user.setUsername("admin");
-                user.setPassword("admin@123");
-                session.beginTransaction();
-                session.save(user);
-                session.getTransaction().commit();
+                User user1 = session.createQuery("select u from User u where u.username like 'admin'", User.class).getSingleResult();
+                if (user1 == null) {
+                    User user = new User();
+                    user.setMatricule("admin");
+                    user.setEmail("admin@mail.com");
+                    user.setPrenom("Admin");
+                    user.setNom("Admin");
+                    user.setUsername("admin");
+                    user.setPassword("admin@123");
+                    session.beginTransaction();
+                    session.save(user);
+                    session.getTransaction().commit();
+                }
             } catch (Exception e) {
                 session.getTransaction().rollback();
                 e.printStackTrace();
