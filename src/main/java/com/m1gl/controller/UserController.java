@@ -2,7 +2,6 @@ package main.java.com.m1gl.controller;
 
 
 import main.java.com.m1gl.models.User;
-import main.java.com.m1gl.models.Utilisateur;
 import main.java.com.m1gl.services.implementations.UserDAO;
 import main.java.com.m1gl.utils.Utilitaire;
 import org.glassfish.jersey.media.multipart.FormDataParam;
@@ -23,7 +22,7 @@ public class UserController extends BaseController{
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     public Response listService() {
-        List<Utilisateur> users = iuser.getAllUsers();
+        List<User> users = iuser.getAllUsers();
 
         return sendSuccess("liste des utilisateurs",users);
 
@@ -33,7 +32,7 @@ public class UserController extends BaseController{
     @POST
     @Produces(MediaType.APPLICATION_JSON)
     @Consumes(MediaType.APPLICATION_JSON)
-    public Response register(Utilisateur user){
+    public Response register(User user){
 
         try {
             if(user.getNom().trim().equals("") || user.getPrenom().trim().equals("") ||
@@ -117,7 +116,7 @@ public class UserController extends BaseController{
                     password.trim().equals("")){
                 return sendError(200,"Renseigner tous les champs!");
             }
-            Utilisateur resp = iuser.login(username,password);
+            User resp = iuser.login(username,password);
 
             if(resp!=null){
                 return sendSuccess("Connexion reussie",resp);
