@@ -8,12 +8,27 @@
             <set />
           </value>
         </entry>
+        <entry key="/a.sql">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/../../../Angular_project/madjindo/proxy.conf.json">
           <value>
             <set />
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/../../../Angular_project/madjindo/src/app/pages/boutique-list/boutique-list.component.html">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../M1/JEE/Project/Immobilier/TEMPLATE/coreui-free-react-admin-template/src/services/api.js">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/com/m1gl/config/HibernateConfiguration.java">
           <value>
             <set />
           </value>

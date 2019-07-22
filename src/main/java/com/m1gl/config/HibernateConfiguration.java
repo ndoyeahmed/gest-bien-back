@@ -1,5 +1,6 @@
 package main.java.com.m1gl.config;
 
+import main.java.com.m1gl.models.User;
 import org.hibernate.HibernateException;
 import org.hibernate.Metamodel;
 import org.hibernate.Session;
@@ -43,6 +44,21 @@ public class HibernateConfiguration {
                 for (Object o : query.list()) {
                     System.out.println("  " + o);
                 }
+            }
+            try {
+                User user = new User();
+                user.setMatricule("admin");
+                user.setEmail("admin@mail.com");
+                user.setPrenom("Admin");
+                user.setNom("Admin");
+                user.setUsername("admin");
+                user.setPassword("admin@123");
+                session.beginTransaction();
+                session.save(user);
+                session.getTransaction().commit();
+            } catch (Exception e) {
+                session.getTransaction().rollback();
+                e.printStackTrace();
             }
         } finally {
             session.close();
