@@ -18,7 +18,7 @@
         <!-- Mapping Models java to DB entities -->
         <mapping class="main.java.com.m1gl.models.Bailleur"/>
         <mapping class="main.java.com.m1gl.models.Bien"/>
-        <mapping class="main.java.com.m1gl.models.Utilisateur"/>
+        <mapping class="main.java.com.m1gl.models.User"/>
         <mapping class="main.java.com.m1gl.models.Client"/>
         <mapping class="main.java.com.m1gl.models.Typebien"/>
         <mapping class="main.java.com.m1gl.models.Photo"/>
