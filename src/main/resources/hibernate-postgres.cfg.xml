@@ -5,9 +5,9 @@
 <hibernate-configuration>
     <session-factory>
         <property name="connection.driver_class">org.postgresql.Driver</property>
-        <property name="connection.url">jdbc:postgresql://raja.db.elephantsql.com:5432/vxrpzhav</property>
-        <property name="connection.username">vxrpzhav</property>
-        <property name="connection.password">bY_XC9hwIUD9QrGj48KYBIWXw4WtRJnB</property>
+        <property name="connection.url">jdbc:postgresql://raja.db.elephantsql.com:5432/jjiairnv</property>
+        <property name="connection.username">jjiairnv</property>
+        <property name="connection.password">wyp94zvMfQWf1Vq2r-xUH2I5E88HFG_p</property>
         <property name="connection.autocommit">true</property>
         <property name="current_session_context_class">thread</property>
         <property name="show_sql">true</property>
@@ -20,7 +20,6 @@
         <mapping class="main.java.com.m1gl.models.Bien"/>
         <mapping class="main.java.com.m1gl.models.User"/>
         <mapping class="main.java.com.m1gl.models.Client"/>
-        <mapping class="main.java.com.m1gl.models.Personne"/>
         <mapping class="main.java.com.m1gl.models.Typebien"/>
         <mapping class="main.java.com.m1gl.models.Photo"/>
         <mapping class="main.java.com.m1gl.models.TypeReglement"/>
