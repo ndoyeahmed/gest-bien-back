@@ -20,7 +20,7 @@ public class Paiement implements Serializable {
     private Date datePaiement;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    private User user;
+    private Utilisateur user;
 
     @ManyToOne
     private TypeReglement typeReglement;
@@ -56,11 +56,11 @@ public class Paiement implements Serializable {
         this.datePaiement = datePaiement;
     }
 
-    public User getUser() {
+    public Utilisateur getUser() {
         return user;
     }
 
-    public void setUser(User user) {
+    public void setUser(Utilisateur user) {
         this.user = user;
     }
 

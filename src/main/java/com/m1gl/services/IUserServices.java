@@ -2,22 +2,23 @@ package main.java.com.m1gl.services;
 
 
 import main.java.com.m1gl.models.User;
+import main.java.com.m1gl.models.Utilisateur;
 
 import java.util.List;
 
 //@Local
 public interface IUserServices {
 
-    List<User> getAllUsers();
+    List<Utilisateur> getAllUsers();
 
-    boolean addUser(User user);
+    boolean addUser(Utilisateur user);
 
 
-    User getUserByUsername(String username);
+    Utilisateur getUserByUsername(String username);
 
-    User getUserByEmail(String email);
+    Utilisateur getUserByEmail(String email);
 
-    User login(String username,String password);
+    Utilisateur login(String username,String password);
 
-    User getUserById(Long id);
+    Utilisateur getUserById(Long id);
 }
