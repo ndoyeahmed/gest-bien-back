@@ -13,7 +13,7 @@
         <property name="show_sql">true</property>
         <property name="dialect">org.hibernate.dialect.PostgreSQLDialect</property>
         <!-- DB schema will be updated if needed -->
-        <property name="hbm2ddl.auto">drop-create</property>
+        <property name="hbm2ddl.auto">create</property>
 
         <!-- Mapping Models java to DB entities -->
         <mapping class="main.java.com.m1gl.models.Bailleur"/>
