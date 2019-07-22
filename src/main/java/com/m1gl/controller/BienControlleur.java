@@ -51,7 +51,7 @@ public class BienControlleur extends BaseController {
     @Produces(MediaType.APPLICATION_JSON)
     public Response getAllTypeBiens() {
         List<Typebien> liste = ibiens.allTypeBien();
-        return sendSuccess("Liste des Types de bien", liste);
+        return Response.status(200).entity(liste).build();
     }
 
     /**
