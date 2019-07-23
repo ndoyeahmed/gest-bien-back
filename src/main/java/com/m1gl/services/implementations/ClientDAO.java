@@ -28,7 +28,7 @@ public class ClientDAO implements IClientServices {
     @Override
     public Client getClientByTel(String telephone) {
         try {
-            return session.createQuery("SELECT c FROM Client c where c.telephone=:telephone",Client.class)
+            return session.createQuery("SELECT c FROM Client c where c.phoneNumber=:telephone",Client.class)
                     .setParameter("telephone",telephone).getSingleResult();
         }catch (Exception ex){
             return null;

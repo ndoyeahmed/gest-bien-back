@@ -46,4 +46,6 @@ public interface IBienServices {
 
     List<Typebien> allTypeBien();
 
+    List<Bien> allBiensByType(Long id);
+
 }

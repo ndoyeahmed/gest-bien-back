@@ -1,5 +1,6 @@
 package main.java.com.m1gl.config;
 
+import main.java.com.m1gl.models.Profil;
 import main.java.com.m1gl.models.User;
 import org.hibernate.HibernateException;
 import org.hibernate.Metamodel;
@@ -9,6 +10,8 @@ import org.hibernate.cfg.Configuration;
 import org.hibernate.query.Query;
 
 import javax.persistence.metamodel.EntityType;
+import java.sql.Timestamp;
+import java.time.LocalDateTime;
 
 public class HibernateConfiguration {
 
@@ -46,7 +49,29 @@ public class HibernateConfiguration {
                 }
             }
             try {
-                User user1 = session.createQuery("select u from User u where u.username like 'admin'", User.class).getSingleResult();
+                User user1 = null;
+                Profil profil = null;
+                Profil profil1 = new Profil();
+                try {
+                    user1 = session.createQuery("select u from User u where u.username like 'admin'", User.class).getSingleResult();
+                } catch (Exception e) {
+                    e.printStackTrace();
+                    user1 = null;
+                }
+                try {
+                    profil = session.createQuery("select p from Profil p where p.libelle like 'Admin'", Profil.class).getSingleResult();
+                } catch (Exception e) {
+                    e.printStackTrace();
+                    user1 = null;
+                }
+                if (profil == null) {
+                    profil1.setLibelle("Admin");
+                    profil1.setArchiver(false);
+                    profil1.setStatus(true);
+                    session.beginTransaction();
+                    session.save(profil1);
+                    session.getTransaction().commit();
+                }
                 if (user1 == null) {
                     User user = new User();
                     user.setMatricule("admin");
@@ -55,6 +80,8 @@ public class HibernateConfiguration {
                     user.setNom("Admin");
                     user.setUsername("admin");
                     user.setPassword("admin@123");
+                    user.setDate(Timestamp.valueOf(LocalDateTime.now()));
+                    user.setProfil(profil1);
                     session.beginTransaction();
                     session.save(user);
                     session.getTransaction().commit();

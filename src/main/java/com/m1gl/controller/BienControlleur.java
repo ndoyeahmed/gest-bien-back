@@ -44,6 +44,17 @@ public class BienControlleur extends BaseController {
     }
 
     /**
+     * @return la liste des Biens par type
+     */
+    @GET
+    @Path("/all-bien-by-type/{id}")
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response getAllbiensByTypeBien(@PathParam("id") Long id) {
+        List<Bien> liste = ibiens. allBiensByType(id);
+        return sendSuccess("Liste des Biens par type", liste);
+    }
+
+    /**
      * @return la liste des types de biens
      */
     @GET
@@ -67,95 +78,6 @@ public class BienControlleur extends BaseController {
             return sendSuccess("bien id " + id, bien);
         } else {
             return sendError(404, "bien non trouvé");
-        }
-    }
-
-//    /**
-//     * @param bien le bien qu'on veut ajouter
-//     * @return succes et le bien créé si tout est ok et error en cas de problème
-//     * @apiNote formart de retour
-//     * {
-//     * "bailleur": {"id": 1},
-//     * "bienNumero": "34092-4",
-//     * "description": "maison2",
-//     * "prixBailleur": 150000,
-//     * "statut": false,
-//     * "surface": 156.5,
-//     * "typebien": {"id": 1}
-//     * }
-//     */
-//    @POST
-//    @Path("/add")
-//    @Produces(MediaType.APPLICATION_JSON)
-//    @Consumes(MediaType.APPLICATION_JSON)
-//    public Response addBien(Bien bien) {
-//        if ( bien.getDescription().trim().equals("") || bien.getBienNumero().trim().equals("")) {
-//            return sendError(200, ALL_FIELD_REQUIRE);
-//        }
-//
-//        try {
-//            boolean save = ibiens.saveBien(bien);
-//            if (save) {
-//                return sendSuccess("Bien enregistré avec success!", bien);
-//            } else {
-//                return sendError(200, "Bien non enregistré!");
-//            }
-//
-//        } catch (Exception ex) {
-//            return sendError(500, ERROR_SERVER);
-//        }
-//    }
-
-    @POST
-    @Produces(MediaType.APPLICATION_JSON)
-    @Consumes(MediaType.MULTIPART_FORM_DATA)
-    public Response addBien(@FormDataParam("file") FormDataBodyPart body,
-                            @FormDataParam("description") String description, @FormDataParam("prix_bailleur") int prix_bailleur,
-                            @FormDataParam("surface") Double surface, @FormDataParam("bailleur_id") Long bailleur,
-                            @FormDataParam("typebien_id") Long typebien) throws IOException {
-        if (description.trim().equals("")) {
-            return sendError(200, ALL_FIELD_REQUIRE);
-        }
-        Bailleur bailleur1 = ibiens.getBailleurById(bailleur);
-        Typebien typebien1 = ibiens.getTypeBienById(typebien);
-        List<Photo> photos = new ArrayList<>();
-        Utilitaire utilitaire = new Utilitaire();
-
-        for (BodyPart part : body.getParent().getBodyParts()) {
-            InputStream is = part.getEntityAs(InputStream.class);
-            ContentDisposition meta = part.getContentDisposition();
-            if (meta.getFileName() != null) {
-                Photo photo = utilitaire.writeToFile(is, meta);
-                photos.add(photo);
-            }
-        }
-        try {
-            Bien bien = new Bien();
-            bien.setBienNumero(Utilitaire.generateNumBien());
-            bien.setDescription(description);
-            bien.setSurface(surface);
-            bien.setStatut(true);
-            bien.setBailleur(bailleur1);
-            bien.setTypebien(typebien1);
-            bien.setPrixBailleur(prix_bailleur);
-            boolean save = ibiens.saveBien(bien);
-            if (save) {
-                if (!photos.isEmpty()) {
-                    photos.forEach(x -> {
-                        x.setBien(bien);
-                        ibiens.savePhoto(x);
-                    });
-                    return sendSuccess("Bien et photo(s) enregistré avec success", bien);
-                } else {
-                    return sendSuccess("Bien enregistré avec success & error on upload picture!", bien);
-                }
-            } else {
-                return sendError(200, "Bien non enregistré!");
-            }
-
-        } catch (Exception ex) {
-            ex.printStackTrace();
-            return sendError(500, ERROR_SERVER);
         }
     }
 
@@ -293,7 +215,7 @@ public class BienControlleur extends BaseController {
             boolean save = ibiens.saveBailleur(bailleur);
 
             if (save) {
-                return sendSuccess("Bailleur enregistré avec success!", bailleur);
+                return sendSuccess("Bailleur enregistré avec success!", ibiens.getAllBailleurs());
             } else {
                 return sendError(200, "Bailleur non enregistré!");
             }

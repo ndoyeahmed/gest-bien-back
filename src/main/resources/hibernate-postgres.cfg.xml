@@ -29,6 +29,7 @@
         <mapping class="main.java.com.m1gl.models.Mois"/>
         <mapping class="main.java.com.m1gl.models.MoisAnnee"/>
         <mapping class="main.java.com.m1gl.models.MoisPaiement"/>
+        <mapping class="main.java.com.m1gl.models.Profil"/>
         <!-- end Mapping Models java to DB entities -->
     </session-factory>
 </hibernate-configuration>

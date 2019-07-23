@@ -2,6 +2,7 @@ package main.java.com.m1gl.models;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.Date;
 
 @Entity
 @Table(name = "utilisateur")
@@ -11,6 +12,12 @@ public class User extends Personne implements Serializable {
 
     @Column(length = 80,nullable = false)
     private String password;
+    @Temporal(TemporalType.TIMESTAMP)
+    private Date date;
+
+    @ManyToOne
+    @JoinColumn(name = "profil", referencedColumnName = "id")
+    private Profil profil;
 
 
 
@@ -36,5 +43,21 @@ public class User extends Personne implements Serializable {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public Date getDate() {
+        return date;
+    }
+
+    public void setDate(Date date) {
+        this.date = date;
+    }
+
+    public Profil getProfil() {
+        return profil;
+    }
+
+    public void setProfil(Profil profil) {
+        this.profil = profil;
     }
 }

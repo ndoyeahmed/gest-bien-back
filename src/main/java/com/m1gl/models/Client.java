@@ -2,6 +2,7 @@ package main.java.com.m1gl.models;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.Date;
 
 @Entity
 public class Client extends Personne implements Serializable {
@@ -11,9 +12,16 @@ public class Client extends Personne implements Serializable {
     private Long id;
     @Column(nullable = false,length = 15)
     private String CIN;
+    @Temporal(TemporalType.TIMESTAMP)
+    private Date date;
 
-    @Column(nullable = false,length = 15)
-    private String telephone;
+    public Date getDate() {
+        return date;
+    }
+
+    public void setDate(Date date) {
+        this.date = date;
+    }
 
     public String getCIN() {
         return CIN;
@@ -21,14 +29,6 @@ public class Client extends Personne implements Serializable {
 
     public void setCIN(String CIN) {
         this.CIN = CIN;
-    }
-
-    public String getTelephone() {
-        return telephone;
-    }
-
-    public void setTelephone(String telephone) {
-        this.telephone = telephone;
     }
 
     public Long getId() {

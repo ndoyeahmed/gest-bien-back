@@ -18,6 +18,7 @@ public class Personne implements Serializable {
     protected String prenom;
     @Column(nullable = false,length = 50)
     protected String email;
+    protected String phoneNumber;
 
     public Long getId() {
         return id;
@@ -57,5 +58,13 @@ public class Personne implements Serializable {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public String getPhoneNumber() {
+        return phoneNumber;
+    }
+
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
     }
 }

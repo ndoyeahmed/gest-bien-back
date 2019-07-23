@@ -3,22 +3,52 @@
   <component name="issues">
     <option name="index">
       <map>
-        <entry key="/Dummy.txt">
+        <entry key="$PROJECT_DIR$/../../../M1/JEE/Project/Immobilier/TEMPLATE/coreui-free-react-admin-template/src/Components/Bailleur/BailleurComponent.js">
           <value>
             <set />
           </value>
         </entry>
-        <entry key="/a.sql">
+        <entry key="$PROJECT_DIR$/../../../M1/JEE/Project/Immobilier/TEMPLATE/coreui-free-react-admin-template/src/Components/Bailleur/BailleurListComponent.js">
           <value>
             <set />
           </value>
         </entry>
-        <entry key="$PROJECT_DIR$/../../../Angular_project/madjindo/proxy.conf.json">
+        <entry key="$PROJECT_DIR$/../../../M1/JEE/Project/Immobilier/TEMPLATE/coreui-free-react-admin-template/src/Components/Client/ClientComponent.js">
           <value>
             <set />
           </value>
         </entry>
-        <entry key="$PROJECT_DIR$/../../../Angular_project/madjindo/src/app/pages/boutique-list/boutique-list.component.html">
+        <entry key="$PROJECT_DIR$/../../../M1/JEE/Project/Immobilier/TEMPLATE/coreui-free-react-admin-template/src/Components/Client/ClientListComponent.js">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../M1/JEE/Project/Immobilier/TEMPLATE/coreui-free-react-admin-template/src/Components/Location/LocationComponent.js">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../M1/JEE/Project/Immobilier/TEMPLATE/coreui-free-react-admin-template/src/Components/Location/LocationListComponent.js">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../M1/JEE/Project/Immobilier/TEMPLATE/coreui-free-react-admin-template/src/Components/Utilisateur/UtilisateurListPage.js">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../M1/JEE/Project/Immobilier/TEMPLATE/coreui-free-react-admin-template/src/Components/Utilisateur/UtilisateurPage.js">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../M1/JEE/Project/Immobilier/TEMPLATE/coreui-free-react-admin-template/src/_nav.js">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../M1/JEE/Project/Immobilier/TEMPLATE/coreui-free-react-admin-template/src/routes.js">
           <value>
             <set />
           </value>
@@ -28,42 +58,17 @@
             <set />
           </value>
         </entry>
-        <entry key="$PROJECT_DIR$/../../BackEnd-immo/src/main/java/com/m1gl/controller/BienControlleur.java">
+        <entry key="$PROJECT_DIR$/../../../M1/JEE/Project/Immobilier/TEMPLATE/coreui-free-react-admin-template/src/services/bienService.js">
           <value>
             <set />
           </value>
         </entry>
-        <entry key="$PROJECT_DIR$/../../BackEnd-immo/src/main/java/com/m1gl/controller/CORSFilter.java">
+        <entry key="$PROJECT_DIR$/../../../M1/JEE/Project/Immobilier/TEMPLATE/coreui-free-react-admin-template/src/services/locationService.js">
           <value>
             <set />
           </value>
         </entry>
-        <entry key="$PROJECT_DIR$/../../BackEnd-immo/src/main/java/com/m1gl/controller/UserController.java">
-          <value>
-            <set />
-          </value>
-        </entry>
-        <entry key="$PROJECT_DIR$/../../BackEnd-immo/src/main/java/com/m1gl/models/Bien.java">
-          <value>
-            <set />
-          </value>
-        </entry>
-        <entry key="$PROJECT_DIR$/../../BackEnd-immo/src/main/java/com/m1gl/models/Paiement.java">
-          <value>
-            <set />
-          </value>
-        </entry>
-        <entry key="$PROJECT_DIR$/../../BackEnd-immo/src/main/java/com/m1gl/models/Photo.java">
-          <value>
-            <set />
-          </value>
-        </entry>
-        <entry key="$PROJECT_DIR$/../../BackEnd-immo/src/main/java/com/m1gl/models/User.java">
-          <value>
-            <set />
-          </value>
-        </entry>
-        <entry key="$PROJECT_DIR$/../../BackEnd-immo/src/main/java/com/m1gl/utils/Utilitaire.java">
+        <entry key="$PROJECT_DIR$/../../../M1/JEE/Project/Immobilier/TEMPLATE/coreui-free-react-admin-template/src/services/utilisateurService.js">
           <value>
             <set />
           </value>
@@ -73,12 +78,12 @@
             <set />
           </value>
         </entry>
-        <entry key="$PROJECT_DIR$/src/main/java/com/m1gl/controller/BaseController.java">
+        <entry key="$PROJECT_DIR$/src/main/java/com/m1gl/controller/BienControlleur.java">
           <value>
             <set />
           </value>
         </entry>
-        <entry key="$PROJECT_DIR$/src/main/java/com/m1gl/controller/CORSFilter.java">
+        <entry key="$PROJECT_DIR$/src/main/java/com/m1gl/controller/ClientController.java">
           <value>
             <set />
           </value>
@@ -88,17 +93,7 @@
             <set />
           </value>
         </entry>
-        <entry key="$PROJECT_DIR$/src/main/java/com/m1gl/models/Bien.java">
-          <value>
-            <set />
-          </value>
-        </entry>
-        <entry key="$PROJECT_DIR$/src/main/java/com/m1gl/models/Location.java">
-          <value>
-            <set />
-          </value>
-        </entry>
-        <entry key="$PROJECT_DIR$/src/main/java/com/m1gl/models/Paiement.java">
+        <entry key="$PROJECT_DIR$/src/main/java/com/m1gl/models/Client.java">
           <value>
             <set />
           </value>
@@ -108,17 +103,7 @@
             <set />
           </value>
         </entry>
-        <entry key="$PROJECT_DIR$/src/main/java/com/m1gl/models/User.java">
-          <value>
-            <set />
-          </value>
-        </entry>
-        <entry key="$PROJECT_DIR$/src/main/java/com/m1gl/models/Utilisateur.java">
-          <value>
-            <set />
-          </value>
-        </entry>
-        <entry key="$PROJECT_DIR$/src/main/java/com/m1gl/services/IUserServices.java">
+        <entry key="$PROJECT_DIR$/src/main/java/com/m1gl/services/IBienServices.java">
           <value>
             <set />
           </value>
@@ -128,12 +113,7 @@
             <set />
           </value>
         </entry>
-        <entry key="$PROJECT_DIR$/src/main/java/com/m1gl/services/implementations/UserDAO.java">
-          <value>
-            <set />
-          </value>
-        </entry>
-        <entry key="$PROJECT_DIR$/src/main/resources/hibernate-postgres.cfg.xml">
+        <entry key="$PROJECT_DIR$/src/main/java/com/m1gl/services/implementations/ClientDAO.java">
           <value>
             <set />
           </value>

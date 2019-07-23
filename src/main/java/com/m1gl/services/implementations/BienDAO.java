@@ -234,4 +234,16 @@ public class BienDAO implements IBienServices {
             return new ArrayList<>();
         }
     }
+
+    @Override
+    public List<Bien> allBiensByType(Long id) {
+        try {
+            return session.createQuery("select b from Bien b where b.typebien.id=:id", Bien.class)
+                    .setParameter("id", id)
+                    .getResultList();
+        } catch (Exception e) {
+            e.printStackTrace();
+            return new ArrayList<>();
+        }
+    }
 }

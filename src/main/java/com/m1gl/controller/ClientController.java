@@ -8,6 +8,8 @@ import main.java.com.m1gl.utils.Utilitaire;
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
+import java.sql.Timestamp;
+import java.time.LocalDateTime;
 
 /**
  * Ce controller gère le CRUD du client, la liste des locations d'un client
@@ -28,35 +30,30 @@ public class ClientController extends BaseController{
     @Produces(MediaType.APPLICATION_JSON)
     @Consumes(MediaType.APPLICATION_JSON)
     public Response addClient(Client client){
-        if(client.getTelephone().trim().equals("") || client.getCIN().trim().equals("") ||
+        if(client.getPhoneNumber().trim().equals("") || client.getCIN().trim().equals("") ||
         client.getEmail().trim().equals("")  ||
         client.getNom().trim().equals("") || client.getPrenom().trim().equals("")){
             return sendError(200,"Veuillez renseigner tous les champs!");
         }else{
-            if(iclient.getClientByTel(client.getTelephone()) != null){
+            if(iclient.getClientByTel(client.getPhoneNumber()) != null){
                 return sendError(200,"Ce numéro de téléphone est déjà associée à un compte");
             }
-
             if(iclient.getClientByEmail(client.getEmail()) != null){
                 return sendError(200,"Cette adresse email est déjà associée à un compte");
             }
-
-            if(iclient.getClientByEmail(client.getCIN()) != null){
+            if(iclient.getClientByCIN(client.getCIN()) != null){
                 return sendError(200,"Ce CIN est déjà associée à un compte");
             }
-
             try{
+                client.setDate(Timestamp.valueOf(LocalDateTime.now()));
                 client.setMatricule(Utilitaire.generateMatriculeClient());
                 boolean aide = iclient.addClient(client);
-
                 if(aide){
-                    return sendSuccess("Client ajouté avec succes",client);
+                    return sendSuccess("Client ajouté avec succes",iclient.getAllClient());
                 }else{
                     return sendError(200,"Erreur survenue lors de l'ajout du client");
                 }
-
             }catch(Exception ex){
-
                 return sendError(500,"Erreur server");
             }
         }
@@ -68,11 +65,9 @@ public class ClientController extends BaseController{
     @Produces(MediaType.APPLICATION_JSON)
     public Response showClient(@PathParam("id") Long id){
         Client client = iclient.getClientById(id);
-
         if(client!=null){
             return sendSuccess("Client id= "+id,client);
         }
-
         return sendError(200,"Client non trouvé");
     }
 
@@ -81,12 +76,10 @@ public class ClientController extends BaseController{
     @Produces(MediaType.APPLICATION_JSON)
     @Consumes(MediaType.APPLICATION_JSON)
     public Response updateClient(@PathParam("id") Long id,Client newclient){
-
         Client client = iclient.getClientById(id);
-
         if(client!=null){
             client.setCIN(newclient.getCIN());
-            client.setTelephone(newclient.getTelephone());
+            client.setPhoneNumber(newclient.getPhoneNumber());
             client.setEmail(newclient.getEmail());
             client.setNom(newclient.getNom());
             client.setPrenom(newclient.getPrenom());
@@ -96,9 +89,7 @@ public class ClientController extends BaseController{
             }else{
                 return sendError(200,"update error");
             }
-
         }
-
         return sendError(200,"Client non trouvé, impossible de faire une modification");
 
     }
