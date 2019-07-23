@@ -49,30 +49,14 @@ public class HibernateConfiguration {
                 }
             }
             try {
-                User user1 = null;
-                Profil profil = null;
                 Profil profil1 = new Profil();
-                try {
-                    user1 = session.createQuery("select u from User u where u.username like 'admin'", User.class).getSingleResult();
-                } catch (Exception e) {
-                    e.printStackTrace();
-                    user1 = null;
-                }
-                try {
-                    profil = session.createQuery("select p from Profil p where p.libelle like 'Admin'", Profil.class).getSingleResult();
-                } catch (Exception e) {
-                    e.printStackTrace();
-                    user1 = null;
-                }
-                if (profil == null) {
                     profil1.setLibelle("Admin");
                     profil1.setArchiver(false);
                     profil1.setStatus(true);
                     session.beginTransaction();
                     session.save(profil1);
                     session.getTransaction().commit();
-                }
-                if (user1 == null) {
+
                     User user = new User();
                     user.setMatricule("admin");
                     user.setEmail("admin@mail.com");
@@ -85,7 +69,7 @@ public class HibernateConfiguration {
                     session.beginTransaction();
                     session.save(user);
                     session.getTransaction().commit();
-                }
+
             } catch (Exception e) {
                 session.getTransaction().rollback();
                 e.printStackTrace();
